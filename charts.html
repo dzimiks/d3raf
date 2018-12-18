@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D3 JS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.11/c3.min.css">
+
+    <style>
+        .brush .selection {
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">D3 JS</h1>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="c3-chart" style="height: 400px;"></div>
+        </div>
+    </div>
+
+    <!--<div class="row" style="margin-top: 30px;">-->
+        <!--<div class="col-md-12">-->
+            <!--<svg width="960" height="1452">-->
+                <!--<filter id="monochrome">-->
+                    <!--<feColorMatrix type="saturate" values="0"></feColorMatrix>-->
+                <!--</filter>-->
+                <!--<defs>-->
+                    <!--<image id="image" width="100%" height="100%"-->
+                           <!--xlink:href="https://bl.ocks.org/mbostock/raw/9511ae067889eefa5537eedcbbf87dab/mona-lisa.jpg"></image>-->
+                <!--</defs>-->
+                <!--<use id="monochrome-image" filter="url(#monochrome)" xlink:href="#image"></use>-->
+                <!--<use id="color-image" xlink:href="#image"></use>-->
+            <!--</svg>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<ul>-->
+                <!--<li><a href="https://bl.ocks.org/mbostock/raw/4061961/">Bullets</a></li>-->
+                <!--<li><a href="http://mbostock.github.io/d3/talk/20111116/force-collapsible.html">Force Collapsible</a>-->
+                <!--</li>-->
+                <!--<li><a href="http://mbostock.github.io/d3/talk/20111116/pack-hierarchy.html">Pack Hierarchy</a></li>-->
+                <!--<li><a href="https://beta.observablehq.com/@mbostock/d3-choropleth">Choropleth</a></li>-->
+                <!--<li><a href="https://beta.observablehq.com/@mbostock/d3-tidy-tree">Tidy Tree</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div>
+        <button class="btn btn-primary"><a href="index.html" style="color: white; text-decoration: none;">Go Back</a></button>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+<!-- <script src="https://d3js.org/d3-selection.v1.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.11/c3.js"></script>
+
+<script type="text/javascript">
+    // C3.js
+    let chart = c3.generate({
+        bindto: '#c3-chart',
+        data: {
+            // url: 'https://c3js.org/data/c3_test.csv',
+            columns: [
+                ['data1', 30, 200, 100, 400, 150, 250],
+                // ['data2', 50, 120, 80, 40, 115, 25],
+                // ['data3', 150, 34, 23, 43, 430, 12],
+                // ['data4', 250, 345, 23, 12, 123, 235]
+            ],
+            type: 'bar',
+            // colors: {
+            //     data1: '#e53935',
+            //     data2: '#1565c0',
+            //     data3: '#ff6f00',
+            //     data4: '#2e7d32'
+            // }
+        }
+    });
+
+    setTimeout(function () {
+        chart.load({
+            columns: [
+                ['data1', 230, 190, 300, 500, 300, 400]
+            ]
+        });
+    }, 1000);
+
+    setTimeout(function () {
+        chart.load({
+            columns: [
+                ['data3', 130, 150, 200, 300, 200, 100]
+            ]
+        });
+    }, 2000);
+
+    setTimeout(function () {
+        chart.unload({
+            ids: 'data1'
+        });
+    }, 3000);
+
+    // Mona Lisa
+    let brush = d3.brush();
+
+    let svg = d3.select("svg");
+
+    svg.append("g")
+        .attr("class", "brush")
+        .call(brush)
+        .call(brush.move, [[307, 167], [611, 539]])
+        .select(".selection")
+        .attr("id", "brush-selection");
+
+    svg.append("clipPath")
+        .attr("id", "brush-clip")
+        .append("use")
+        .attr("xlink:href", "#brush-selection");
+
+    svg.select("#color-image")
+        .attr("clip-path", "url(#brush-clip)");
+</script>
+</body>
+</html>
