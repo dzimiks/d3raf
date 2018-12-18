@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Hamiltonian Graph Builder</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        }
+
+        .range-text {
+            width: 25px;
+        }
+
+        circle {
+            cursor: move;
+        }
+
+        .magic-vertex {
+            fill-opacity: 0;
+            stroke: #999;
+            stroke-opacity: 0;
+        }
+
+        .vertex {
+            fill: #1f77b4;
+            fill-opacity: 1;
+            stroke: #999;
+            stroke-opacity: .5;
+        }
+
+        .link {
+            stroke: #999;
+            stroke-opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="controls">
+    <script type="text/x-handlebars" data-template-name="application">
+        {{#view App.ApplicationView}}
+        <div style="position: absolute; top: 0; left: 5px;">
+            <div class="form">
+                <div class="control-group">
+                    <label for="lcfCodes">Preset LCF Codes</label>
+                    {{view App.ApplicationView.lcfCodes}}
+                </div>
+
+                <div class="control-group">
+                    <div {{bindAttr class="App.controls.lcfCodeError:error :control-group" }}>
+                        <label for="lcfCode">LCF Code <sup>
+                            <small>[<a href="http://mathworld.wolfram.com/LCFNotation.html" target="_blank">Wolfram
+                                MathWorld</a>]
+                            </small>
+                        </sup>
+                            <button class="btn btn-mini btn-primary" style="float:right;" {{action
+                            "random" target="view"}}>Random</button>
+                            {{#if App.controls.lcfCodeError}}
+                            <strong style="display:block;clear:both;width: 220px;">{{App.controls.lcfCodeError}}</strong>
+                            {{/if}}</label>
+                        {{view App.ApplicationView.lcfCode}}
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="animationSpeed">Construction Speed</label>
+                    {{view App.ApplicationView.animationSpeeds}}
+                </div>
+
+                <div class="control-group clearfix">
+                    {{#if App.graph.isFrozen}}
+                    <div class="btn-group" style="float: right;">
+                        <button class="btn btn-primary btn-mini" {{action
+                        "prevFrame" target="view"}}>
+                        <i class="icon-step-backward icon-white"></i>
+                        </button>
+                        <strong class="btn btn-mini" style="min-width: 18px">{{App.graph.currentFrame}}</strong>
+                        <button class="btn btn-primary btn-mini" {{action
+                        "nextFrame" target="view"}}>
+                        <i class="icon-step-forward icon-white"></i>
+                        </button>
+                    </div>
+                    {{/if}}
+                    <label class="checkbox">
+                        {{view App.ApplicationView.freezeFrame}} Freeze Frame
+                    </label>
+                </div>
+
+                <!--
+                            <div class="control-group">
+                              <label for="charge">Charge</label>
+                              <input style="width:180px" id="charge" type="range" min="0" max="500" step="25" {{bindAttr value="App.graph.charge"}} />
+                              {{view Ember.TextField valueBinding="App.graph.charge" classNames="steppable range-text"}}
+                            </div>
+                -->
+
+                <div class="control-group">
+                    <button class="btn btn-block btn-primary" {{action
+                    "redraw" target="view"}}>
+                    <i class="icon-repeat icon-white"></i>
+                    Redraw
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div style="position:absolute;bottom:5px;left:5px">
+            <button class="btn"><a href="index.html" style="color: black; text-decoration: none;">Go Back</a></button>
+        </div>
+</div>
+{{/view}}
+</script>
+</div>
+<div id="chart"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-pre.2/ember-1.0.0-pre.2.min.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/caret/1.0.0/jquery.caret.min.js"></script>
+<script type="text/javascript" src="scripts/hamiltonian-graph.js"></script>
+</body>
+</html>

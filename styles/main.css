@@ -25,6 +25,18 @@ html, body {
     padding: 0;
 }
 
+.mdl-layout__tab {
+    color: white;
+}
+
+.mdl-layout.is-upgraded .mdl-layout__tab.is-active {
+    color: white;
+}
+
+.mdl-layout__header {
+    background-image: url("../cover.png");
+}
+
 .mdl-demo .mdl-layout__header-row {
     padding-left: 40px;
 }
@@ -130,7 +142,7 @@ html, body {
 }
 
 .mdl-demo section.section--center {
-    max-width: 860px;
+    max-width: 1024px;
 }
 
 .mdl-demo #features section.section--center {
@@ -252,4 +264,48 @@ html, body {
 
 .mdl-demo .mdl-menu__container {
     z-index: 99;
+}
+
+.mdl-mega-footer {
+    margin-top: 30px;
+}
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+
+.focus circle {
+    fill: none;
+    stroke: steelblue;
+}
+
+svg {
+    border: solid 1px #666;
+    overflow: hidden;
+}
+
+path {
+    fill: yellow;
+    stroke: #000;
+    stroke-width: .5px;
+}
+
+circle {
+    fill: #ccc;
+    stroke: #000;
+    pointer-events: none;
 }
