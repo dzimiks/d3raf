@@ -1,191 +1,191 @@
 <!--<!doctype html>-->
 <!--<html lang="en">-->
 <!--<head>-->
-<!--<meta charset="utf-8">-->
-<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-<!--<meta name="description" content="">-->
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--<title>D3.js</title>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="description" content="">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<title>D3.js</title>-->
 
-<!--<link rel="shortcut icon" type="image/png" href="favicon.png"/>-->
+    <!--<link rel="shortcut icon" type="image/png" href="favicon.png"/>-->
 
-<!--&lt;!&ndash; Disable tap highlight on IE &ndash;&gt;-->
-<!--<meta name="msapplication-tap-highlight" content="no">-->
+    <!--&lt;!&ndash; Disable tap highlight on IE &ndash;&gt;-->
+    <!--<meta name="msapplication-tap-highlight" content="no">-->
 
-<!--&lt;!&ndash; Web Application Manifest &ndash;&gt;-->
-<!--&lt;!&ndash; <link rel="manifest" href="manifest.json"> &ndash;&gt;-->
+    <!--&lt;!&ndash; Web Application Manifest &ndash;&gt;-->
+    <!--&lt;!&ndash; <link rel="manifest" href="manifest.json"> &ndash;&gt;-->
 
-<!--&lt;!&ndash; Add to homescreen for Chrome on Android &ndash;&gt;-->
-<!--<meta name="mobile-web-app-capable" content="yes">-->
-<!--<meta name="application-name" content="Web Starter Kit">-->
-<!--<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">-->
+    <!--&lt;!&ndash; Add to homescreen for Chrome on Android &ndash;&gt;-->
+    <!--<meta name="mobile-web-app-capable" content="yes">-->
+    <!--<meta name="application-name" content="Web Starter Kit">-->
+    <!--<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">-->
 
-<!--&lt;!&ndash; Add to homescreen for Safari on iOS &ndash;&gt;-->
-<!--<meta name="apple-mobile-web-app-capable" content="yes">-->
-<!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
-<!--<meta name="apple-mobile-web-app-title" content="Web Starter Kit">-->
-<!--<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">-->
+    <!--&lt;!&ndash; Add to homescreen for Safari on iOS &ndash;&gt;-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <!--<meta name="apple-mobile-web-app-title" content="Web Starter Kit">-->
+    <!--<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">-->
 
-<!--&lt;!&ndash; Tile icon for Win8 (144x144 + tile color) &ndash;&gt;-->
-<!--<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">-->
-<!--<meta name="msapplication-TileColor" content="#2F3BA2">-->
+    <!--&lt;!&ndash; Tile icon for Win8 (144x144 + tile color) &ndash;&gt;-->
+    <!--<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">-->
+    <!--<meta name="msapplication-TileColor" content="#2F3BA2">-->
 
-<!--&lt;!&ndash; Color the status bar on mobile devices &ndash;&gt;-->
-<!--<meta name="theme-color" content="#2F3BA2">-->
+    <!--&lt;!&ndash; Color the status bar on mobile devices &ndash;&gt;-->
+    <!--<meta name="theme-color" content="#2F3BA2">-->
 
-<!--&lt;!&ndash; SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones &ndash;&gt;-->
-<!--&lt;!&ndash;-->
-<!--<link rel="canonical" href="http://www.example.com/">-->
-<!--&ndash;&gt;-->
+    <!--&lt;!&ndash; SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones &ndash;&gt;-->
+    <!--&lt;!&ndash;-->
+    <!--<link rel="canonical" href="http://www.example.com/">-->
+    <!--&ndash;&gt;-->
 
-<!--&lt;!&ndash; Material Design icons &ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+    <!--&lt;!&ndash; Material Design icons &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
 
 
-<!--&lt;!&ndash; Material Design Lite page styles:-->
-<!--You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html-->
-<!--Format: material.color1-color2.min.css, some examples:-->
-<!--material.red-teal.min.css-->
-<!--material.blue-orange.min.css-->
-<!--material.purple-indigo.min.css-->
-<!--&ndash;&gt;-->
-<!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-indigo.min.css"/>-->
+    <!--&lt;!&ndash; Material Design Lite page styles:-->
+    <!--You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html-->
+    <!--Format: material.color1-color2.min.css, some examples:-->
+    <!--material.red-teal.min.css-->
+    <!--material.blue-orange.min.css-->
+    <!--material.purple-indigo.min.css-->
+    <!--&ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-indigo.min.css"/>-->
 
-<!--&lt;!&ndash; Your styles &ndash;&gt;-->
-<!--<link rel="stylesheet" href="styles/main.css">-->
-<!--<link rel="stylesheet" href="styles/colors.css">-->
-<!--<script src="scripts/d3js.js"></script>-->
+    <!--&lt;!&ndash; Your styles &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="styles/main.css">-->
+    <!--<link rel="stylesheet" href="styles/colors.css">-->
+    <!--<script src="scripts/d3js.js"></script>-->
 <!--</head>-->
 <!--<body class="mdl-demo mdl-color&#45;&#45;grey-100 mdl-color-text&#45;&#45;grey-700 mdl-base">-->
 <!--<div class="mdl-layout mdl-js-layout mdl-layout&#45;&#45;fixed-header">-->
-<!--<header class="mdl-layout__header mdl-layout__header&#45;&#45;scroll mdl-color&#45;&#45;primary">-->
-<!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
-<!--</div>-->
-<!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
-<!--&lt;!&ndash;<h3>D3.js</h3>&ndash;&gt;-->
-<!--</div>-->
-<!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
-<!--</div>-->
-<!--<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color&#45;&#45;primary-dark">-->
-<!--<a href="#overview" class="mdl-layout__tab is-active">Overview</a>-->
-<!--<a href="charts.html" class="mdl-layout__tab">Charts</a>-->
-<!--<a href="hamiltonian-graph.html" class="mdl-layout__tab">Hamiltonian Graph</a>-->
-<!--<a href="#complex" class="mdl-layout__tab">Complex</a>-->
-<!--<a href="https://docs.google.com/presentation/d/1kMOf6bAfzp2gNjIGjC5CKSa6xqrVNnOzocpnpClkPOM/edit?usp=sharing"-->
-<!--class="mdl-layout__tab">Presentation</a>-->
-<!--</div>-->
-<!--</header>-->
-<!--<main class="mdl-layout__content">-->
-<!--<div class="mdl-layout__tab-panel is-active" id="overview">-->
-<!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
-<!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col-desktop mdl-cell&#45;&#45;12-col-tablet mdl-cell&#45;&#45;12-col-phone">-->
-<!--<div class="mdl-card__supporting-text">-->
-<!--<h4>D3.js</h4>-->
-<!--<p>D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring-->
-<!--data-->
-<!--to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full-->
-<!--capabilities-->
-<!--of modern browsers without tying yourself to a proprietary framework, combining powerful-->
-<!--visualization components and a data-driven approach to DOM manipulation.</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
-<!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col">-->
-<!--<div class="mdl-card__supporting-text mdl-grid mdl-grid&#45;&#45;no-spacing">-->
-<!--<h4 class="mdl-cell mdl-cell&#45;&#45;12-col">Examples</h4>-->
-<!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-<!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-<!--</div>-->
-<!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-<!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-<!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-<!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-<!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-<!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-<!--</div>-->
+    <!--<header class="mdl-layout__header mdl-layout__header&#45;&#45;scroll mdl-color&#45;&#45;primary">-->
+        <!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
+        <!--</div>-->
+        <!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
+            <!--&lt;!&ndash;<h3>D3.js</h3>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
+        <!--</div>-->
+        <!--<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color&#45;&#45;primary-dark">-->
+            <!--<a href="#overview" class="mdl-layout__tab is-active">Overview</a>-->
+            <!--<a href="charts.html" class="mdl-layout__tab">Charts</a>-->
+            <!--<a href="hamiltonian-graph.html" class="mdl-layout__tab">Hamiltonian Graph</a>-->
+            <!--<a href="#complex" class="mdl-layout__tab">Complex</a>-->
+            <!--<a href="https://docs.google.com/presentation/d/1kMOf6bAfzp2gNjIGjC5CKSa6xqrVNnOzocpnpClkPOM/edit?usp=sharing"-->
+               <!--class="mdl-layout__tab">Presentation</a>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!--<main class="mdl-layout__content">-->
+        <!--<div class="mdl-layout__tab-panel is-active" id="overview">-->
+            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
+                <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col-desktop mdl-cell&#45;&#45;12-col-tablet mdl-cell&#45;&#45;12-col-phone">-->
+                    <!--<div class="mdl-card__supporting-text">-->
+                        <!--<h4>D3.js</h4>-->
+                        <!--<p>D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring-->
+                            <!--data-->
+                            <!--to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full-->
+                            <!--capabilities-->
+                            <!--of modern browsers without tying yourself to a proprietary framework, combining powerful-->
+                            <!--visualization components and a data-driven approach to DOM manipulation.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
+                <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col">-->
+                    <!--<div class="mdl-card__supporting-text mdl-grid mdl-grid&#45;&#45;no-spacing">-->
+                        <!--<h4 class="mdl-cell mdl-cell&#45;&#45;12-col">Examples</h4>-->
+                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
+                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
+                        <!--</div>-->
+                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
+                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
+                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
+                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
+                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
+                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
+                        <!--</div>-->
 
-<!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-<!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-<!--</div>-->
-<!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-<!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-<!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-<!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-<!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-<!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-<!--</div>-->
+                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
+                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
+                        <!--</div>-->
+                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
+                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
+                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
+                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
+                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
+                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
+                        <!--</div>-->
 
-<!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-<!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-<!--</div>-->
-<!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-<!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-<!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-<!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-<!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-<!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-<!--</div>-->
+                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
+                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
+                        <!--</div>-->
+                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
+                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
+                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
+                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
+                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
+                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
+                        <!--</div>-->
 
-<!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-<!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-<!--</div>-->
-<!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-<!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-<!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-<!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-<!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-<!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
-<!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col">-->
-<!--<div class="mdl-card__supporting-text">-->
-<!--<h4>Technology</h4>-->
-<!--<p>-->
-<!--D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply-->
-<!--data-driven transformations to the document. For example, you can use D3 to generate an HTML-->
-<!--table from an array of numbers. Or, use the same data to create an interactive SVG bar chart-->
-<!--with smooth transitions and interaction.</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--</div>-->
+                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
+                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
+                        <!--</div>-->
+                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
+                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
+                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
+                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
+                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
+                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
+                <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col">-->
+                    <!--<div class="mdl-card__supporting-text">-->
+                        <!--<h4>Technology</h4>-->
+                        <!--<p>-->
+                            <!--D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply-->
+                            <!--data-driven transformations to the document. For example, you can use D3 to generate an HTML-->
+                            <!--table from an array of numbers. Or, use the same data to create an interactive SVG bar chart-->
+                            <!--with smooth transitions and interaction.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+        <!--</div>-->
 
-<!--&lt;!&ndash;https://janmilosh.github.io/d3js-presentation/&ndash;&gt;-->
-<!--&lt;!&ndash;https://github.com/wbkd/awesome-d3&ndash;&gt;-->
+        <!--&lt;!&ndash;https://janmilosh.github.io/d3js-presentation/&ndash;&gt;-->
+        <!--&lt;!&ndash;https://github.com/wbkd/awesome-d3&ndash;&gt;-->
 
-<!--<div class="mdl-layout__tab-panel" id="complex">-->
-<!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing">-->
-<!--<div class="mdl-cell mdl-cell&#45;&#45;12-col">-->
-<!--<h3>Line Chart</h3>-->
-<!--<div id="line-chart">-->
-<!--</div>-->
+        <!--<div class="mdl-layout__tab-panel" id="complex">-->
+            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing">-->
+                <!--<div class="mdl-cell mdl-cell&#45;&#45;12-col">-->
+                    <!--<h3>Line Chart</h3>-->
+                    <!--<div id="line-chart">-->
+                    <!--</div>-->
 
-<!--<h3>Bar Chart</h3>-->
-<!--<div id="bar-chart">-->
-<!--</div>-->
+                    <!--<h3>Bar Chart</h3>-->
+                    <!--<div id="bar-chart">-->
+                    <!--</div>-->
 
-<!--<h3>Voronoi</h3>-->
-<!--<div id="voronoi">-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!--</div>-->
+                    <!--<h3>Voronoi</h3>-->
+                    <!--<div id="voronoi">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+        <!--</div>-->
 
-<!--<footer class="mdl-mega-footer">-->
-<!--<p style="text-align: center; margin: 0 auto;">-->
-<!--Created by <a href="https://github.com/dzimiks"-->
-<!--style="color: white; text-decoration: none;">dzimiks</a>-->
-<!--</p>-->
-<!--</footer>-->
-<!--</main>-->
+        <!--<footer class="mdl-mega-footer">-->
+            <!--<p style="text-align: center; margin: 0 auto;">-->
+                <!--Created by <a href="https://github.com/dzimiks"-->
+                              <!--style="color: white; text-decoration: none;">dzimiks</a>-->
+            <!--</p>-->
+        <!--</footer>-->
+    <!--</main>-->
 <!--</div>-->
 
 <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
@@ -201,21 +201,21 @@
 <!--<script src="scripts/script.js"></script>-->
 
 <!--<script>-->
-<!--// d3.selectAll("p").style("color", "red");-->
+    <!--// d3.selectAll("p").style("color", "red");-->
 
-<!--// d3.selectAll("p").style("color", function () {-->
-<!--//     return "hsl(" + Math.random() * 360 + ", 100%, 50%)";-->
-<!--// });-->
+    <!--// d3.selectAll("p").style("color", function () {-->
+    <!--//     return "hsl(" + Math.random() * 360 + ", 100%, 50%)";-->
+    <!--// });-->
 
-<!--// d3.selectAll("p").style("color", function (d, i) {-->
-<!--//     return i % 2 ? "red" : "green";-->
-<!--// });-->
+    <!--// d3.selectAll("p").style("color", function (d, i) {-->
+    <!--//     return i % 2 ? "red" : "green";-->
+    <!--// });-->
 
-<!--// d3.selectAll("p")-->
-<!--//     .data([4, 8, 15, 16, 23, 42])-->
-<!--//     .style("font-size", function (d) {-->
-<!--//         return d + "px";-->
-<!--//     });-->
+    <!--// d3.selectAll("p")-->
+    <!--//     .data([4, 8, 15, 16, 23, 42])-->
+    <!--//     .style("font-size", function (d) {-->
+    <!--//         return d + "px";-->
+    <!--//     });-->
 <!--</script>-->
 <!--</body>-->
 <!--</html>-->
