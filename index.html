@@ -1,792 +1,221 @@
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="utf-8">-->
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <!--<meta name="description" content="">-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <!--<title>D3.js</title>-->
-
-    <!--<link rel="shortcut icon" type="image/png" href="favicon.png"/>-->
-
-    <!--&lt;!&ndash; Disable tap highlight on IE &ndash;&gt;-->
-    <!--<meta name="msapplication-tap-highlight" content="no">-->
-
-    <!--&lt;!&ndash; Web Application Manifest &ndash;&gt;-->
-    <!--&lt;!&ndash; <link rel="manifest" href="manifest.json"> &ndash;&gt;-->
-
-    <!--&lt;!&ndash; Add to homescreen for Chrome on Android &ndash;&gt;-->
-    <!--<meta name="mobile-web-app-capable" content="yes">-->
-    <!--<meta name="application-name" content="Web Starter Kit">-->
-    <!--<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">-->
-
-    <!--&lt;!&ndash; Add to homescreen for Safari on iOS &ndash;&gt;-->
-    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
-    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
-    <!--<meta name="apple-mobile-web-app-title" content="Web Starter Kit">-->
-    <!--<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">-->
-
-    <!--&lt;!&ndash; Tile icon for Win8 (144x144 + tile color) &ndash;&gt;-->
-    <!--<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">-->
-    <!--<meta name="msapplication-TileColor" content="#2F3BA2">-->
-
-    <!--&lt;!&ndash; Color the status bar on mobile devices &ndash;&gt;-->
-    <!--<meta name="theme-color" content="#2F3BA2">-->
-
-    <!--&lt;!&ndash; SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones &ndash;&gt;-->
-    <!--&lt;!&ndash;-->
-    <!--<link rel="canonical" href="http://www.example.com/">-->
-    <!--&ndash;&gt;-->
-
-    <!--&lt;!&ndash; Material Design icons &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-
-
-    <!--&lt;!&ndash; Material Design Lite page styles:-->
-    <!--You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html-->
-    <!--Format: material.color1-color2.min.css, some examples:-->
-    <!--material.red-teal.min.css-->
-    <!--material.blue-orange.min.css-->
-    <!--material.purple-indigo.min.css-->
-    <!--&ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-indigo.min.css"/>-->
-
-    <!--&lt;!&ndash; Your styles &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="styles/main.css">-->
-    <!--<link rel="stylesheet" href="styles/colors.css">-->
-    <!--<script src="scripts/d3js.js"></script>-->
-<!--</head>-->
-<!--<body class="mdl-demo mdl-color&#45;&#45;grey-100 mdl-color-text&#45;&#45;grey-700 mdl-base">-->
-<!--<div class="mdl-layout mdl-js-layout mdl-layout&#45;&#45;fixed-header">-->
-    <!--<header class="mdl-layout__header mdl-layout__header&#45;&#45;scroll mdl-color&#45;&#45;primary">-->
-        <!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
-        <!--</div>-->
-        <!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
-            <!--&lt;!&ndash;<h3>D3.js</h3>&ndash;&gt;-->
-        <!--</div>-->
-        <!--<div class="mdl-layout&#45;&#45;large-screen-only mdl-layout__header-row">-->
-        <!--</div>-->
-        <!--<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color&#45;&#45;primary-dark">-->
-            <!--<a href="#overview" class="mdl-layout__tab is-active">Overview</a>-->
-            <!--<a href="charts.html" class="mdl-layout__tab">Charts</a>-->
-            <!--<a href="hamiltonian-graph.html" class="mdl-layout__tab">Hamiltonian Graph</a>-->
-            <!--<a href="#complex" class="mdl-layout__tab">Complex</a>-->
-            <!--<a href="https://docs.google.com/presentation/d/1kMOf6bAfzp2gNjIGjC5CKSa6xqrVNnOzocpnpClkPOM/edit?usp=sharing"-->
-               <!--class="mdl-layout__tab">Presentation</a>-->
-        <!--</div>-->
-    <!--</header>-->
-    <!--<main class="mdl-layout__content">-->
-        <!--<div class="mdl-layout__tab-panel is-active" id="overview">-->
-            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
-                <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col-desktop mdl-cell&#45;&#45;12-col-tablet mdl-cell&#45;&#45;12-col-phone">-->
-                    <!--<div class="mdl-card__supporting-text">-->
-                        <!--<h4>D3.js</h4>-->
-                        <!--<p>D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring-->
-                            <!--data-->
-                            <!--to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full-->
-                            <!--capabilities-->
-                            <!--of modern browsers without tying yourself to a proprietary framework, combining powerful-->
-                            <!--visualization components and a data-driven approach to DOM manipulation.</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</section>-->
-            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
-                <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col">-->
-                    <!--<div class="mdl-card__supporting-text mdl-grid mdl-grid&#45;&#45;no-spacing">-->
-                        <!--<h4 class="mdl-cell mdl-cell&#45;&#45;12-col">Examples</h4>-->
-                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-                        <!--</div>-->
-                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-                        <!--</div>-->
-
-                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-                        <!--</div>-->
-                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-                        <!--</div>-->
-
-                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-                        <!--</div>-->
-                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-                        <!--</div>-->
-
-                        <!--<div class="section__circle-container mdl-cell mdl-cell&#45;&#45;2-col mdl-cell&#45;&#45;1-col-phone">-->
-                            <!--<div class="section__circle-container__circle mdl-color&#45;&#45;primary section__circle&#45;&#45;big"></div>-->
-                        <!--</div>-->
-                        <!--<div class="mdl-cell mdl-cell&#45;&#45;10-col-desktop mdl-cell&#45;&#45;6-col-tablet mdl-cell&#45;&#45;3-col-phone">-->
-                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,-->
-                                <!--eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed-->
-                                <!--laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna-->
-                                <!--velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius-->
-                                <!--nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac-->
-                                <!--turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</section>-->
-            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing mdl-shadow&#45;&#45;2dp">-->
-                <!--<div class="mdl-card mdl-cell mdl-cell&#45;&#45;12-col">-->
-                    <!--<div class="mdl-card__supporting-text">-->
-                        <!--<h4>Technology</h4>-->
-                        <!--<p>-->
-                            <!--D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply-->
-                            <!--data-driven transformations to the document. For example, you can use D3 to generate an HTML-->
-                            <!--table from an array of numbers. Or, use the same data to create an interactive SVG bar chart-->
-                            <!--with smooth transitions and interaction.</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</section>-->
-        <!--</div>-->
-
-        <!--&lt;!&ndash;https://janmilosh.github.io/d3js-presentation/&ndash;&gt;-->
-        <!--&lt;!&ndash;https://github.com/wbkd/awesome-d3&ndash;&gt;-->
-
-        <!--<div class="mdl-layout__tab-panel" id="complex">-->
-            <!--<section class="section&#45;&#45;center mdl-grid mdl-grid&#45;&#45;no-spacing">-->
-                <!--<div class="mdl-cell mdl-cell&#45;&#45;12-col">-->
-                    <!--<h3>Line Chart</h3>-->
-                    <!--<div id="line-chart">-->
-                    <!--</div>-->
-
-                    <!--<h3>Bar Chart</h3>-->
-                    <!--<div id="bar-chart">-->
-                    <!--</div>-->
-
-                    <!--<h3>Voronoi</h3>-->
-                    <!--<div id="voronoi">-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</section>-->
-        <!--</div>-->
-
-        <!--<footer class="mdl-mega-footer">-->
-            <!--<p style="text-align: center; margin: 0 auto;">-->
-                <!--Created by <a href="https://github.com/dzimiks"-->
-                              <!--style="color: white; text-decoration: none;">dzimiks</a>-->
-            <!--</p>-->
-        <!--</footer>-->
-    <!--</main>-->
-<!--</div>-->
-
-<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
-<!--<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>-->
-<!--<script src="https://d3js.org/d3-time.v1.min.js"></script>-->
-<!--<script src="https://d3js.org/d3-time-format.v2.min.js"></script>-->
-<!--<script src="scripts/d3.geom.js"></script>-->
-<!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
-<!--<script src="//d3js.org/topojson.v1.min.js"></script>-->
-<!--<script src="https://d3js.org/d3-selection.v1.min.js"></script>-->
-<!--<script src="scripts/main.js"></script>-->
-<!--<script src="scripts/script.js"></script>-->
-
-<!--<script>-->
-    <!--// d3.selectAll("p").style("color", "red");-->
-
-    <!--// d3.selectAll("p").style("color", function () {-->
-    <!--//     return "hsl(" + Math.random() * 360 + ", 100%, 50%)";-->
-    <!--// });-->
-
-    <!--// d3.selectAll("p").style("color", function (d, i) {-->
-    <!--//     return i % 2 ? "red" : "green";-->
-    <!--// });-->
-
-    <!--// d3.selectAll("p")-->
-    <!--//     .data([4, 8, 15, 16, 23, 42])-->
-    <!--//     .style("font-size", function (d) {-->
-    <!--//         return d + "px";-->
-    <!--//     });-->
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
-
 <!doctype html>
 <html lang="en">
 <head>
-    <title>PDF Report</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
-    <style>
-        .card {
-            margin-top: 20px;
-        }
-    </style>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <!-- <link rel="manifest" href="manifest.json"> -->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Material Design icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+    -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-indigo.min.css"/>
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <script src="scripts/d3js.js"></script>
 </head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12" style="page-break-before: always;">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non bibendum sem. Sed porta
-                        posuere volutpat. Suspendisse dolor odio, suscipit vitae venenatis eget, gravida at quam.
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris
-                        vitae est ex. Proin sed tellus finibus, sodales arcu vitae, dictum tellus. Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Ut vel lacus placerat, elementum enim non, hendrerit libero.
-                        Nunc at cursus elit. Nulla euismod venenatis arcu a scelerisque.
-                    </p>
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            <!--<h3>D3.js</h3>-->
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+            <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+            <a href="charts.html" class="mdl-layout__tab">Charts</a>
+            <a href="hamiltonian-graph.html" class="mdl-layout__tab">Hamiltonian Graph</a>
+            <a href="#complex" class="mdl-layout__tab">Complex</a>
+            <a href="https://docs.google.com/presentation/d/1kMOf6bAfzp2gNjIGjC5CKSa6xqrVNnOzocpnpClkPOM/edit?usp=sharing"
+               class="mdl-layout__tab">Presentation</a>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                    <div class="mdl-card__supporting-text">
+                        <h4>D3.js</h4>
+                        <p>D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring
+                            data
+                            to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full
+                            capabilities
+                            of modern browsers without tying yourself to a proprietary framework, combining powerful
+                            visualization components and a data-driven approach to DOM manipulation.</p>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary" id="export-pdf">Export to PDF</button>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                        <h4 class="mdl-cell mdl-cell--12-col">Examples</h4>
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--primary section__circle--big"></div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,
+                                eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed
+                                laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna
+                                velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius
+                                nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>
+                        </div>
+
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--primary section__circle--big"></div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,
+                                eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed
+                                laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna
+                                velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius
+                                nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>
+                        </div>
+
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--primary section__circle--big"></div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,
+                                eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed
+                                laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna
+                                velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius
+                                nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>
+                        </div>
+
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                            <div class="section__circle-container__circle mdl-color--primary section__circle--big"></div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis sapien tortor,
+                                eu finibus libero gravida nec. Quisque id rutrum quam. Sed ultricies vel nisi sed
+                                laoreet. Nullam mattis posuere lorem. Vestibulum molestie viverra mollis. Aenean urna
+                                velit, porttitor non tortor a, faucibus viverra magna. In a vestibulum ante, sed varius
+                                nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                                turpis egestas. Vivamus maximus blandit lacus sed tincidunt.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card__supporting-text">
+                        <h4>Technology</h4>
+                        <p>
+                            D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply
+                            data-driven transformations to the document. For example, you can use D3 to generate an HTML
+                            table from an array of numbers. Or, use the same data to create an interactive SVG bar chart
+                            with smooth transitions and interaction.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <div class="col-md-12" style="page-break-before: always;">
-            <div class="card">
-                <div class="card-body">
-                    <div id="chart1" style="height: 600px; min-width: 310px;"></div>
+        <!--https://janmilosh.github.io/d3js-presentation/-->
+        <!--https://github.com/wbkd/awesome-d3-->
+
+        <div class="mdl-layout__tab-panel" id="complex">
+            <section class="section--center mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h3>Line Chart</h3>
+                    <div id="line-chart">
+                    </div>
+
+                    <h3>Bar Chart</h3>
+                    <div id="bar-chart">
+                    </div>
+
+                    <h3>Voronoi</h3>
+                    <div id="voronoi">
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
 
-        <div class="col-md-12" style="page-break-before: always;">
-            <div class="card">
-                <div class="card-body">
-                    <div id="chart2" style="height: 600px; min-width: 310px;"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-12" style="page-break-before: always;">
-            <div class="card">
-                <div class="card-body">
-                    <div id="chart3" style="height: 600px; min-width: 310px;"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-12" style="page-break-before: always;">
-            <div class="card">
-                <div class="card-body">
-                    <div id="chart4" style="height: 600px; min-width: 310px;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <footer class="mdl-mega-footer">
+            <p style="text-align: center; margin: 0 auto;">
+                Created by <a href="https://github.com/dzimiks"
+                              style="color: white; text-decoration: none;">dzimiks</a>
+            </p>
+        </footer>
+    </main>
 </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
+<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+<script src="scripts/d3.geom.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/d3-selection.v1.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/script.js"></script>
 
-<script src="https://code.highcharts.com/stock/highstock.js"></script>
-<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+<script>
+    // d3.selectAll("p").style("color", "red");
 
-<script type="text/javascript">
-
-    let analytics = [{
-        "id": 76959,
-        "followers": 1404,
-        "following": 1765,
-        "media_count": 235,
-        "usertags_count": 38,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": false,
-        "is_business": true,
-        "created_at": "2018-12-05 19:32:38",
-        "updated_at": "2018-12-05 19:32:38"
-    }, {
-        "id": 77555,
-        "followers": 1459,
-        "following": 1854,
-        "media_count": 235,
-        "usertags_count": 38,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": false,
-        "is_business": true,
-        "created_at": "2018-12-07 01:02:16",
-        "updated_at": "2018-12-07 01:02:16"
-    }, {
-        "id": 78162,
-        "followers": 1503,
-        "following": 1780,
-        "media_count": 235,
-        "usertags_count": 38,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": true,
-        "is_business": true,
-        "created_at": "2018-12-08 09:33:23",
-        "updated_at": "2018-12-08 09:33:23"
-    }, {
-        "id": 78661,
-        "followers": 1509,
-        "following": 1582,
-        "media_count": 235,
-        "usertags_count": 38,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": true,
-        "is_business": true,
-        "created_at": "2018-12-09 10:42:17",
-        "updated_at": "2018-12-09 10:42:17"
-    }, {
-        "id": 79340,
-        "followers": 1520,
-        "following": 1872,
-        "media_count": 236,
-        "usertags_count": 37,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": false,
-        "is_business": false,
-        "created_at": "2018-12-11 01:19:49",
-        "updated_at": "2018-12-11 01:19:49"
-    }, {
-        "id": 79769,
-        "followers": 1577,
-        "following": 1736,
-        "media_count": 236,
-        "usertags_count": 37,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": false,
-        "is_business": true,
-        "created_at": "2018-12-12 10:34:25",
-        "updated_at": "2018-12-12 10:34:25"
-    }, {
-        "id": 80405,
-        "followers": 1657,
-        "following": 1814,
-        "media_count": 236,
-        "usertags_count": 36,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": true,
-        "is_business": false,
-        "created_at": "2018-12-13 19:39:10",
-        "updated_at": "2018-12-13 19:39:10"
-    }, {
-        "id": 80999,
-        "followers": 1715,
-        "following": 1944,
-        "media_count": 236,
-        "usertags_count": 36,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": false,
-        "is_business": true,
-        "created_at": "2018-12-15 01:09:30",
-        "updated_at": "2018-12-15 01:09:30"
-    }, {
-        "id": 81509,
-        "followers": 1829,
-        "following": 2032,
-        "media_count": 236,
-        "usertags_count": 36,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": false,
-        "is_business": true,
-        "created_at": "2018-12-16 10:32:27",
-        "updated_at": "2018-12-16 10:32:27"
-    }, {
-        "id": 82173,
-        "followers": 1920,
-        "following": 2082,
-        "media_count": 236,
-        "usertags_count": 36,
-        "username": "dzimiks",
-        "pk": "921495938",
-        "social_media_account_id": 1487,
-        "is_private": true,
-        "is_business": true,
-        "created_at": "2018-12-17 19:38:56",
-        "updated_at": "2018-12-17 19:38:56"
-    }];
-
-    let jsonfile = {
-        "jsonarray": analytics
-    };
-
-    let labels = jsonfile.jsonarray.map(function (e) {
-        return e.created_at;
+    d3.selectAll("p").style("color", function () {
+        return "hsl(" + Math.random() * 360 + ", 100%, 50%)";
     });
 
-    let privates = jsonfile.jsonarray.map(function (e) {
-        return e.is_private;
-    });
+    // d3.selectAll("p").style("color", function (d, i) {
+    //     return i % 2 ? "red" : "green";
+    // });
 
-    let businesses = jsonfile.jsonarray.map(function (e) {
-        return e.is_business;
-    });
-
-    let data = jsonfile.jsonarray.map(function (e) {
-        return e.followers;
-    });
-
-    let data2 = jsonfile.jsonarray.map(function (e) {
-        return e.following;
-    });
-
-    let data3 = jsonfile.jsonarray.map(function (e) {
-        return e.media_count;
-    });
-
-    let data4 = jsonfile.jsonarray.map(function (e) {
-        return e.usertags_count;
-    });
-
-    let privates_true_count = 0;
-    let privates_false_count = 0;
-    let privates_count = privates.length;
-
-    for (let i = 0; i < privates_count; i++) {
-        if (privates[i]) {
-            privates_true_count++;
-        } else {
-            privates_false_count++;
-        }
-    }
-
-    let businesses_true_count = 0;
-    let businesses_false_count = 0;
-    let businesses_count = businesses.length;
-
-    for (let i = 0; i < businesses_count; i++) {
-        if (businesses[i]) {
-            businesses_true_count++;
-        } else {
-            businesses_false_count++;
-        }
-    }
-
-    let followers_data = [];
-    let following_data = [];
-    let media_count_data = [];
-    let usertags_count_data = [];
-
-    for (let i = 0; i < data.length; i++) {
-        followers_data.push([Date.parse(labels[i]), data[i]]);
-        following_data.push([Date.parse(labels[i]), data2[i]]);
-        media_count_data.push([Date.parse(labels[i]), data3[i]]);
-        usertags_count_data.push([Date.parse(labels[i]), data4[i]]);
-    }
-
-    let chart1 = Highcharts.stockChart('chart1', {
-        rangeSelector: {
-            selected: 4
-        },
-        title: {
-            text: 'Followers vs Following'
-        },
-        legend: {
-            enabled: true,
-            layout: 'horizontal'
-        },
-        plotOptions: {
-            series: {
-                marker: {
-                    radius: 5,
-                    enabled: true
-                },
-                allowPointSelect: true
-            },
-            line: {
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: true
-            }
-        },
-        series: [{
-            name: 'Followers',
-            data: followers_data,
-            lineWidth: 3,
-            color: '#e53935',
-            tooltip: {
-                valueDecimals: 0
-            },
-            marker: {
-                enabled: true,
-                radius: 3
-            }
-        }, {
-            name: 'Following',
-            data: following_data,
-            lineWidth: 3,
-            color: '#1565c0',
-            tooltip: {
-                valueDecimals: 0
-            }
-        }, {
-            name: 'Media Count',
-            data: media_count_data,
-            lineWidth: 3,
-            color: '#00c853',
-            tooltip: {
-                valueDecimals: 0
-            }
-        }, {
-            name: 'Usertags Count',
-            data: usertags_count_data,
-            lineWidth: 3,
-            color: '#ff6f00',
-            tooltip: {
-                valueDecimals: 0
-            }
-        }]
-    });
-
-    let chart2 = Highcharts.chart('chart2', {
-        chart: {
-            type: 'column'
-        },
-
-        title: {
-            text: 'dzimiks Instagram'
-        },
-
-        subtitle: {
-            text: 'Source: dzimiks.com'
-        },
-
-        yAxis: {
-            title: {
-                text: 'Followers'
-            }
-        },
-
-        legend: {
-            enabled: true,
-            layout: 'horizontal'
-        },
-
-        plotOptions: {
-            column: {
-                stacking: 'normal',
-                dataLabels: {
-                    enabled: true,
-                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
-                }
-            },
-            series: {
-                label: {
-                    connectorAllowed: false
-                },
-                pointStart: 2010
-            }
-        },
-
-        series: [{
-            name: 'Followers',
-            data: data
-        }, {
-            name: 'Following',
-            data: data2
-        }, {
-            name: 'Media Count',
-            data: data3
-        }, {
-            name: 'Usertags Count',
-            data: data4
-        }],
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
-        }
-
-    });
-
-    let chart3 = Highcharts.chart('chart3', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Private vs Public Account'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    }
-                }
-            }
-        },
-        series: [{
-            name: 'Private vs Public Account',
-            colorByPoint: true,
-            data: [{
-                name: 'Private Accounts',
-                y: privates_true_count * 100 / privates_count
-            }, {
-                name: 'Public Accounts',
-                y: privates_false_count * 100 / privates_count
-            }],
-        }]
-    });
-
-    let chart4 = Highcharts.chart('chart4', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Business vs Non Business Account'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    }
-                }
-            }
-        },
-        series: [{
-            name: 'Private vs Public Account',
-            colorByPoint: true,
-            data: [{
-                name: 'Business Accounts',
-                y: businesses_true_count * 100 / businesses_count
-            }, {
-                name: 'Non Business Accounts',
-                y: businesses_false_count * 100 / businesses_count
-            }],
-        }]
-    });
-
-    /**
-     * Create a global getSVG method that takes an array of charts as an
-     * argument
-     */
-    Highcharts.getSVG = function (charts) {
-        let svgArr = [],
-            top = 0,
-            width = 0;
-
-        Highcharts.each(charts, function (chart) {
-            let svg = chart.getSVG(),
-                // Get width/height of SVG for export
-                svgWidth = +svg.match(
-                    /^<svg[^>]*width\s*=\s*\"?(\d+)\"?[^>]*>/
-                )[1],
-                svgHeight = +svg.match(
-                    /^<svg[^>]*height\s*=\s*\"?(\d+)\"?[^>]*>/
-                )[1];
-
-            svg = svg.replace('width="600"', 'width="1000"');
-
-            svg = svg.replace(
-                '<svg',
-                '<g transform="translate(0,' + top + ')" '
-            );
-            svg = svg.replace('</svg>', '</g>');
-
-            top += svgHeight;
-            width = Math.max(width, svgWidth);
-
-            svgArr.push(svg);
-        });
-
-        return '<svg height="' + top + '" width="' + width +
-            '" version="1.1" xmlns="http://www.w3.org/2000/svg">' +
-            svgArr.join('') + '</svg>';
-    };
-
-    /**
-     * Create a global exportCharts method that takes an array of charts as an
-     * argument, and exporting options as the second argument
-     */
-    Highcharts.exportCharts = function (charts, options) {
-
-        // Merge the options
-        options = Highcharts.merge(Highcharts.getOptions().exporting, options);
-
-        // Post to export server
-        Highcharts.post(options.url, {
-            filename: options.filename || 'chart',
-            type: options.type,
-            width: options.width,
-            svg: Highcharts.getSVG(charts)
-        });
-    };
-
-    $('#export-pdf').click(function () {
-        Highcharts.exportCharts([chart1, chart2, chart3, chart4], {
-            type: 'application/pdf',
-            width: 1000
-        });
-    });
+    // d3.selectAll("p")
+    //     .data([4, 8, 15, 16, 23, 42])
+    //     .style("font-size", function (d) {
+    //         return d + "px";
+    //     });
 </script>
 </body>
 </html>
